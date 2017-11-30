@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
 
   def new
     if Preference.find_or_create_by(id: 1).allow_create_artists
-      @song = Song.new
+      @artist = Artist.new
     else
       redirect_to songs_path
     end
