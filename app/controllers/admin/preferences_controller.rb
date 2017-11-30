@@ -4,4 +4,8 @@ class Admin::PreferencesController < ApplicationController
     @preference = Preference.find_or_create_by(id: 1)
   end
 
+  def Update
+    
+  end
+
 end
