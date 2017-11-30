@@ -8,7 +8,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if Preference.find_or_create_by(id: 1).allow_create_artists
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
