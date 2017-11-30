@@ -1,5 +1,7 @@
 <%= form_for @preference do |f| %>
   <%= f.label :artist_sort_order %>
+  <%= f.radio_button :artist_sort_order, 'ASC' %>
+  <%= f.radio_button :artist_sort_order, 'DESC' %>
   <%= f.label :song_sort_order %>
   <%= f.label :allow_create_artists %>
   <%= f.label :allow_create_songs %>
